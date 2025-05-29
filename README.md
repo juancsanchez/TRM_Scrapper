@@ -1,13 +1,12 @@
 # Azure Function Capturadora de TRM
 
-Esta Azure Function obtiene automáticamente la TRM (Tasa Representativa del Mercado - tipo de cambio del peso colombiano frente al dólar estadounidense) diaria desde la Superintendencia Financiera de Colombia y la envía a un espacio de trabajo de Azure Log Analytics.
+Esta Azure Function obtiene automáticamente la TRM (Tasa Representativa del Mercado - tipo de cambio del peso colombiano frente al dólar estadounidense) diaria desde la Superintendencia Financiera de Colombia y la envía a un webhook en Power Automáte o Logic Apps.
 
 ## Características
 
 * **Obtención Automatizada de TRM**: Obtiene el valor oficial de la TRM diariamente.
 * **Análisis de Datos (Parsing)**: Extrae el valor de la TRM del código HTML de la página de la Superintendencia Financiera.
 * **Ejecución Programada**: Se ejecuta según una programación predefinida utilizando un Azure Functions Timer Trigger (normalmente los días de semana).
-* **Integración con Azure Log Analytics**: Envía los datos de la TRM recuperados a Azure Log Analytics para monitoreo, alertas o análisis posteriores.
 
 ## Detalles Técnicos
 
