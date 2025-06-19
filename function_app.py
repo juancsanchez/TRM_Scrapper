@@ -1,5 +1,6 @@
 import logging
 import azure.functions as func
+import os
 
 app = func.FunctionApp()
 
@@ -12,7 +13,7 @@ from string import Template
 
 # Declara constantes del entorno
 URL_TRM = 'https://www.superfinanciera.gov.co/CargaDriver/index.jsp'
-URL_POST = 'https://prod-16.westus.logic.azure.com:443/workflows/bf8a21d4f7cd4e44bbaf7f14044166fb/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=u8SdteLWwYk8t8o0lA6b3Y5BejwI57pnCYcVJXNCZLY'
+URL_POST = os.environ.get("URL_POST")
 
 def get_trm(website):
         price = []
